@@ -17,7 +17,7 @@ export class AppController {
     return { message: 'Welcome to the homepage' };
   }
   @Post('/bolygo')
-  async ujKonyv(@Body() bolygoDto: BolygoDto) {
+  async ujBolygo(@Body() bolygoDto: BolygoDto) {
     if(!bolygoDto.nev2 || !bolygoDto.nev ||!bolygoDto.atmero){
       throw new BadRequestException('Minden mezőt kötelező kitölteni');
     }
@@ -33,7 +33,7 @@ export class AppController {
   
   }
     @Delete('/bolygo/:id')
-    torlesKonyv(@Param('id') id: number) {
+    torlesBolygo(@Param('id') id: number) {
     const bolygokRepo = this.dataSource.getRepository(Bolygo);
     bolygokRepo.delete(id)
     }
