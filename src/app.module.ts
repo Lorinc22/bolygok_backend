@@ -10,9 +10,9 @@ import { AppService } from './app.service';
       host: 'localhost',
       username: 'root',
       password: '',
-      database: 'database',
+      database: 'bolygok',
       entities: [
-        /* List of entities here */
+       
       ],
       synchronize: true,
     }),
